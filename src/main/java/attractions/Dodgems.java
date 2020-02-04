@@ -1,5 +1,7 @@
 package attractions;
 
+import people.Visitor;
+
 public class Dodgems extends Attraction {
     public double defaultPrice;
 
@@ -11,4 +13,14 @@ public class Dodgems extends Attraction {
             return defaultPrice;
         }
 
-}
+
+    public double priceFor(Visitor visitor) {
+        if(visitor.getAge() < 12) {
+            return defaultPrice / 2;
+             }  else {
+                    return defaultPrice;
+                }
+            }
+        }
+
+

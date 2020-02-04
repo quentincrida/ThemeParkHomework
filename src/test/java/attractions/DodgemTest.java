@@ -38,4 +38,9 @@ public class DodgemTest {
     public void hasDefaultPrice(){
         assertEquals(4.50, dodgems.getDefaultPrice(), 0.01);
     }
+    @Test
+    public void priceFor(){
+        assertEquals(2.25, dodgems.priceFor(visitorkid), 0.01);
+        assertEquals(4.50, dodgems.priceFor(visitorAdult), 0.01);
+    }
 }
