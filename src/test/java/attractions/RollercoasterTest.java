@@ -11,12 +11,14 @@ public class RollercoasterTest {
     RollerCoaster rollerCoaster;
     Visitor visitorAdult;
     Visitor visitorKid;
+    Visitor tallKid;
 
     @Before
     public void setUp() {
         rollerCoaster = new RollerCoaster("Blue Ridge", 10);
         visitorAdult = new Visitor(22, 175,100);
         visitorKid = new Visitor(10, 140, 50);
+        tallKid = new Visitor(8, 146, 25);
     }
 
     @Test
@@ -40,5 +42,9 @@ public class RollercoasterTest {
     @Test
     public void cantGoOnRollercoaster(){
         assertEquals(false, rollerCoaster.isAllowedTo(visitorKid));
+    }
+    @Test
+    public void evenTallKidsFalse(){
+        assertEquals(false, rollerCoaster.isAllowedTo(tallKid));
     }
 }
