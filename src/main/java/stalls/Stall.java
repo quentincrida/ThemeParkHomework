@@ -27,4 +27,7 @@ public Stall(String name, String ownerName, ParkingSpot parkingSpot, int rating)
     public ParkingSpot getParkingSpot() {
         return parkingSpot;
     }
+    public int getRating(){
+        return rating;
+    }
 }
